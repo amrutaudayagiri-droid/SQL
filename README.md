@@ -23,5 +23,16 @@ Danny wants to use the data to answer a few simple questions about his customers
 
 ## Question & Solution
 Please join me in executing the queries using MySQL on https://www.db-fiddle.com/f/2rM8RAnq7h5LLDTzZiRWcd/138. It would be great to work together on the questions!
-## What is the total amount each customer spent at the restaurant?
+
+1.What is the total amount each customer spent at the restaurant?
+
+````sql
+select customer_id,sum(price) as Total_Amount_Spent
+from sales as s inner join menu as m using(product_id)
+ group by customer_id;
+
+***
+
+
+
 
